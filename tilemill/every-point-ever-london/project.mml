@@ -1,0 +1,54 @@
+{
+  "bounds": [
+    -0.5617,
+    51.2533,
+    0.3186,
+    51.7219
+  ],
+  "center": [
+    -0.103,
+    51.5045,
+    10
+  ],
+  "format": "png",
+  "interactivity": false,
+  "minzoom": 10,
+  "maxzoom": 16,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "point",
+      "extent": [
+        -0.5699987984838505,
+        51.25000090428656,
+        0.31999990070159806,
+        51.72999970960473
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "hist_point",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-63451.976,6665635.7,35622.226,6751452.4",
+        "host": "localhost",
+        "port": "5432",
+        "dbname": "osm-history-render-london"
+      },
+      "id": "histpoint",
+      "class": "points",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "histpoint"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "name": "Every Point Ever: London",
+  "description": "Every version of every point that ever existed in the OpenStreetMap database: November 2005 to June 2012. Points with larger version numbers are drawn as larger dots.",
+  "attribution": "Data by OpenStreetMap, under CC-BY-SA"
+}
