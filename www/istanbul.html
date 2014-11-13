@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- http://www.mapbox.com/mapbox.js/example/v1.0.0/layers-control/ -->
+<html>
+<head>
+    <script src='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.js'></script>
+    <link href='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.css' rel='stylesheet' />
+    <!--[if lte IE 8]>
+    <link href='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.ie.css' rel='stylesheet' >
+    <![endif]-->
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+        #overlay {
+          position:absolute;
+          right:0;
+          left:0;
+          padding-left: 60px;
+          background-color: rgba(255,255,255,0.9);
+          font-family: Arial,sans-serif;
+        }
+    </style>
+</head>
+<body>
+<div id='map'></div>
+<div id='overlay'>
+<h1>OpenStreetMap: Every Line Ever, Every Point Ever</h1>
+<p>By <a href="http://mappingmashups.net">Alan McConchie</a> and <a href="http://stamen.com">Stamen Design</a>. Data from <a href="http://openstreetmap.org">OpenStreetMap</a> ODbL. <a href="about.html">About</a>. View: <a href=".">San Francisco</a> / <a href="london.html">London</a> / <a href="istanbul.html">Istanbul</a>
+<p>Originally submitted to the Global Urban Humanities Initiative, UC Berkeley, <a href="http://globalurbanhumanities.berkeley.edu/events/mapping-and-its-discontents">Mapping and Its Discontents Symposium</a>, November 2013.</p> 
+<p>Istanbul map added in October 2014, using OSM data from September 2014. Part of the <a href="http://content.stamen.com/maps-istanbul-announcing-maps-mappers">Mapmaker Manifesto</a> curation for the <a href="http://tasarimbienali.iksv.org/en">Istanbul Design Biennial</a>. Download poster: <a href="every_line_ever_istanbul.png">png</a></p>
+.
+</div>
+<script type='text/javascript'>
+    // Based on the Leaflet example from http://leafletjs.com/examples/choropleth.html
+
+    var every_line = L.mapbox.tileLayer('stamen.every_line_ever_istanbul');
+    //var every_point = L.mapbox.tileLayer('stamen.every-point-ever-london');
+
+    var map = L.map('map').setView([41.01, 28.97], 11);
+    every_line.addTo(map);
+/*
+    L.control.layers({
+        'Every Line Ever': every_line.addTo(map),
+        'Every Point Ever': every_point
+    },{ },{
+        collapsed: false
+    }).addTo(map);
+
+    function add_line() {
+        map.removeLayer(every_point);
+        map.addLayer(every_line);
+    };
+
+    function add_point() {
+        map.removeLayer(every_line);
+        map.addLayer(every_point);
+    };
+*/
+
+</script>
+</body>
+</html>
